@@ -1,7 +1,9 @@
 import React from "react";
 
-export default Student = () => {
+const Student = () => {
     return (
-        <h1>This is student page!</h1>
+        <div><h1>This is student page!</h1></div>
     );
 }
+
+export default Student;
