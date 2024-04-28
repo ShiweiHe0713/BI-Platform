@@ -1,0 +1,44 @@
+/* Navbar container styling */
+.navbar {
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    padding: 10px 20px; /* Padding around the navbar */
+    position: fixed; /* Fixed at the top of the page */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+/* Unordered list in the navbar */
+.navbar ul {
+    list-style: none; /* Removes default list styling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    text-align: center; /* Center align the navigation items */
+}
+
+/* List items in the navbar */
+.navbar li {
+    display: inline-block; /* Display list items inline */
+    margin-right: 20px; /* Space between menu items */
+}
+
+/* No right margin for the last item */
+.navbar li:last-child {
+    margin-right: 0;
+}
+
+/* Link styling */
+.navbar a {
+    color: #333333; /* Dark grey color for text */
+    font-size: 16px; /* Set font size */
+    padding: 10px 15px; /* Padding for clickable area */
+    text-decoration: none; /* No underline */
+    text-transform: uppercase; /* Uppercase text for a more formal look */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.navbar a:hover {
+    color: #007BFF; /* Change color on hover */
+}
