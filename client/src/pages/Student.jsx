@@ -2,7 +2,9 @@ import React from "react";
 
 const Student = () => {
     return (
-        <div><h1>This is student page!</h1></div>
+        <div style={{margin: '75px'}}>
+            <h1>This is Student page!</h1>
+        </div>
     );
 }
 

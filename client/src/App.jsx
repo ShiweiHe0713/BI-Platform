@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Student from "./pages/Student"
-import Home from "./pages"
+import Home from "./pages";
+import Student from "./pages/Student";
+import Finance from "./pages/Finance";
+import TodoList from "./pages/TodoList";
 
 export default function App() {
   return (
@@ -12,6 +14,8 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/student" element={<Student />} />
+                <Route path="/finance" element={<Finance />} />
+                <Route path="/todolist" element={<TodoList />} />
             </Routes>
         </Router>
   );
