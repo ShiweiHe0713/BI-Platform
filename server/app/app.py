@@ -19,12 +19,27 @@ def get_tasks():
 
 @app.route('/tasks/<int:task_id>', methods=['GET'])
 def get_task(task_id):
-    task = next((task for task in tasks if task['id'] == task_id), None)
-    if task is None:
+    next_task = next((task for task in tasks if task['id'] == task_id), None)
+    if next_task is None:
         abort(404)
-    return jsonify(task)
+    return jsonify(next_task)
 
-
+@app.route('/tasks', methods=['POST'])
+def create_task():
+    # Check if the request is whether valid
+    if not request.json or not request.json['title']:
+        abort(404)
+    # Start traversing the tasks list and append the new one
+    title = request.json['title']
+    completedness = request.json.get('completed', False)
+    task_id = tasks[-1]['id'] + 1 if tasks else 1
+    task = {
+        "id" : task_id,
+        "title": title,
+        "completed" : completedness
+    }
+    tasks.append(task)
+    return jsonify(task), 201
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -6,6 +6,7 @@ import Home from "./pages";
 import Student from "./pages/Student";
 import Finance from "./pages/Finance";
 import TodoList from "./pages/TodoList";
+import TableauEmbed from "./pages/TableauEmbed";
 
 export default function App() {
   return (
@@ -16,7 +17,10 @@ export default function App() {
                 <Route path="/student" element={<Student />} />
                 <Route path="/finance" element={<Finance />} />
                 <Route path="/todolist" element={<TodoList />} />
+                <Route path='/tableau' element={<TableauEmbed />} />
             </Routes>
-        </Router>
+    </Router>
   );
-}
+};
+
+
